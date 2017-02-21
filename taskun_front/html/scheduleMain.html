@@ -1,0 +1,16 @@
+<div  ng-controller="scheduleTokenControl">
+  <div class="tabContainer header-setting" id="nav" scroll-tabs>
+        <div class="tab" >
+          <div class="tab__button btn " ng-repeat="field in fields"  id="{{field.id}}" ng-click="onFieldClick(field.id)">{{field.name}}</a></div>
+        </div>
+    </div>
+    
+    <div>
+          <div ng-repeat="time in timeArray">
+                <div class="time-scale" ng-style="{top:time.ypos+'vh'} "><p class="time-border"></p>{{time.time}} </div>
+          </div>
+    </div>
+    <div >
+      <div ng-repeat="sch in schList" class="animated"  schedule-token  ng-click="onTokenClick(sch.id,$event)"> </div>
+    </div>
+</div>

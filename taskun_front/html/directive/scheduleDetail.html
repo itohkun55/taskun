@@ -1,0 +1,19 @@
+<div class="popover modal-header"
+ ng-style="{width:'50vw' ,height:'50vh'}"
+    >
+    <h3 class="modal-title" id="modal-title">{{detailTarget.name}}</h3>
+
+    <div class="modal-body" id="modal-body">
+        
+        <div class="time-msg">{{detailTarget.start}}〜{{detailTarget.end}}</div>
+        <div class="detail-desc">詳細　　{{ detailTarget.description }}</div>
+    </div>
+    
+        <ul>
+            <li class="field-btn" ng-repeat="field in targetFields" class="btn"><a href="#" id="{{field.id}}" >{{ field.name }}</a></li>
+       </ul>
+
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>
+    </div>
+</div>
